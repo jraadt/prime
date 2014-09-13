@@ -72,8 +72,7 @@ module.exports = {
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/angular-animate/angular-animate.js',
       'vendor/angular-resource/angular-resource.js',
-      'vendor/d3/d3.js',
-      'vendor/angular-charts-custom/dist/angular-charts.js'
+      'vendor/d3/d3.js'
     ],
     css: [
     ],
