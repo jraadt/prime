@@ -1,0 +1,88 @@
+<ul id="legend" class="list-unstyled list-inline">
+  <li ng-repeat="item in legend" ng-click="togglePitchType(item)">
+    <span style="background-color: {{ item.enabled ? item.color : '#555555' }}"></span> {{ item.name }}
+  </li>
+  <li>
+    <div class="grouping-toggle"><span ng-class="{active:grouping == 'year'}" ng-click="toggleGrouping('year')">Year</span><span ng-class="{active:grouping == 'month'}" ng-click="toggleGrouping('month')">Month</span></div>
+  </li>
+</ul>
+
+<h2>The Initial Left/Right Distance (ft) <span>x0</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.x0Average" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.x0StandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Height (ft) <span>z0</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.z0Average" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.z0StandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Left/Right Velocity (ft/sec) <span>vx0</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.vx0Average" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.vx0StandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Velocity Towards Home Plate (ft/sec) <span>vy0</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.vy0Average" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.vy0StandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Vertical Velocity (ft/sec) <span>vz0</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.vz0Average" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.vz0StandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Left/Right Acceleration (ft/sec<sup>2</sup>) <span>ax</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.axAverage" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.axStandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Acceleration Towards Home Plate (ft/sec<sup>2</sup>) <span>ay</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.ayAverage" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.ayStandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+
+<h2>The Initial Vertical Acceleration (ft/sec<sup>2</sup>) <span>az</span></h2>
+<div class="chart-container">
+  <h3>Average</h3>
+  <div ac-chart="'line'" ac-data="graphData.azAverage" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>
+<div class="chart-container">
+  <h3>Standard Deviation</h3>
+  <div ac-chart="'line'" ac-data="graphData.azStandardDeviation" ac-config="config" ac-refresh="chartRefresh" class="chart"></div>
+</div>

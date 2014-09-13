@@ -1,0 +1,69 @@
+buildscript {
+  repositories {
+    maven { url "http://repo.spring.io/libs-milestone" }
+    mavenLocal()
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+jar.enabled = true
+
+war {
+  baseName = 'prime'
+  version =  '0.1.0'
+  archiveName = 'ROOT.war'
+  classpath = jar.outputs.files + configurations.compile - configurations.providedCompile
+}
+
+repositories {
+  mavenCentral()
+  maven {
+    url 'http://repo.spring.io/milestone'
+    url "http://repo.spring.io/libs-snapshot"
+  }
+}
+
+dependencies {
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.3.0'
+  compile 'com.fasterxml.jackson.core:jackson-core:2.3.0'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.3.0'
+  compile 'joda-time:joda-time:2.3'
+  compile 'log4j:log4j:1.2.17'
+  compile 'org.apache.commons:commons-lang3:3.1'
+  compile 'org.apache.commons:commons-math3:3.2'
+  compile 'org.hibernate:hibernate-core:4.2.7.SP1'
+  compile 'org.hibernate:hibernate-validator:5.0.2.Final'
+  compile 'org.jadira.usertype:usertype.core:3.1.0.CR10'
+  compile 'org.jadira.usertype:usertype.spi:3.1.0.CR10'
+  compile 'org.springframework:spring-orm:4.0.0.RELEASE'
+  compile 'org.springframework:spring-web:4.0.0.RELEASE'
+  compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
+  providedCompile "javax.servlet:jsp-api:2.+"
+  providedCompile "javax.servlet:servlet-api:3.+"
+  providedCompile "org.apache.tomcat:tomcat-jdbc:8.0.0-RC5"
+  compile "javax.servlet:jstl:1.2"
+  compile 'mysql:mysql-connector-java:5.1.27'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.8'
+}
+
+def tomcatHome = "/my/tomcat"
+
+task deployToTomcat(type: Copy) {
+  from war
+  into "${tomcatHome}/webapps"
+}
+
+task startTomcat(type:Exec) {
+  workingDir "${tomcatHome}/bin"
+  commandLine './startup.sh'
+}
+
+task stopTomcat(type:Exec) {
+  workingDir "${tomcatHome}/bin"
+  commandLine './shutdown.sh'
+}

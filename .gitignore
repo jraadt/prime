@@ -1,0 +1,11 @@
+.idea
+.gradle
+prime.iml
+build
+out
+client/*.sw*
+client/*~
+client/build/
+client/dist/
+client/node_modules/
+client/vendor/

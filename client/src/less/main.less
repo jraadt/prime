@@ -1,0 +1,334 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+@import '../../vendor/bootstrap/less/bootstrap.less';
+@import 'bootstrap-override.less';
+@import 'elements.less';
+@import 'animate.less';
+@import 'variables.less';
+
+
+/**
+ * Typography
+ */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLight-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLight-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLight-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLight-webfont.svg#SourceSansProExtraLight') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 200;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLightIt-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLightIt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLightIt-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLightIt-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-ExtraLightIt-webfont.svg#SourceSansProExtraLightItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Light-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Light-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Light-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-LightIt-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-LightIt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-LightIt-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-LightIt-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-LightIt-webfont.svg#SourceSansProLightItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Regular-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Regular-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-It-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-It-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-It-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
+
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Semibold-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Semibold-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Semibold-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-SemiboldIt-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Bold-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Bold-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Bold-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
+
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-BoldIt-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-BoldIt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BoldIt-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BoldIt-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BoldIt-webfont.svg#SourceSansProBoldItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Black-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-Black-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Black-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Black-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-Black-webfont.svg#SourceSansProBlack') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 900;
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-BlackIt-webfont.eot');
+  src: url('/assets/fonts/sourcesanspro/SourceSansPro-BlackIt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BlackIt-webfont.woff') format('woff'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BlackIt-webfont.ttf') format('truetype'),
+  url('/assets/fonts/sourcesanspro/SourceSansPro-BlackIt-webfont.svg#SourceSansProBlackItalic') format('svg');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: @font-family;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #171d25;
+  color: #ffffff;
+}
+
+a,
+.link,
+a:hover,
+a:focus {
+  color: @blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+*, *:before, *:after {
+  .box-sizing(border-box);
+}
+
+span.placeholder {
+  position: absolute;
+  top: 14px;
+  left: 24px;
+  z-index: 100;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  .transition();
+  z-index: 100;
+
+  &.placeholder-focus {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+
+@-webkit-keyframes bar-slide1 {
+  0% {
+    .transform(translateX(-10%));
+  }
+  100% {
+    .transform(translateX(-60%));
+  }
+}
+
+@-webkit-keyframes bar-slide2 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-90%));
+  }
+}
+
+@-webkit-keyframes bar-slide3 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-50%));
+  }
+}
+
+@-moz-keyframes bar-slide1 {
+  0% {
+    .transform(translateX(-10%));
+  }
+  100% {
+    .transform(translateX(-60%));
+  }
+}
+
+@-moz-keyframes bar-slide2 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-90%));
+  }
+}
+
+@-moz-keyframes bar-slide3 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-50%));
+  }
+}
+
+@keyframes bar-slide1 {
+  0% {
+    .transform(translateX(-10%));
+  }
+  100% {
+    .transform(translateX(-60%));
+  }
+}
+
+@keyframes bar-slide2 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-90%));
+  }
+}
+
+@keyframes bar-slide3 {
+  0% {
+    .transform(translateX(-5%));
+  }
+  100% {
+    .transform(translateX(-50%));
+  }
+}
+
+
+
+.fade-in.ng-enter,
+.fade-in.ng-leave {
+  position: absolute;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+}
+
+.fade-in.ng-enter {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+}
+
+.fade-in.ng-leave {
+  animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+}
+
+
+
+.fade-in-down.ng-enter,
+.fade-in-down.ng-leave {
+  position: absolute;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+}
+
+.fade-in-down.ng-enter {
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+}
+
+.fade-in-down.ng-leave {
+  animation-name: fadeOutDown;
+  -webkit-animation-name: fadeOutDown;
+  -moz-animation-name: fadeOutDown;
+}
+
+
+/**
+ * Modules and component styling.
+ */
+
+@import '../app/players/players.less';

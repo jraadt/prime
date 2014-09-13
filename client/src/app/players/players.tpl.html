@@ -1,0 +1,9 @@
+<div id="search" ng-class="{mini:showMini}">
+  <h1>PRIM<span class="prime-icon"><span class="bar one"></span><span class="bar two"></span><span class="bar three"></span></span></h1>
+  <h2>Pitching Release Information and Mechanics Evaluation</h2>
+  <div class="form-group">
+    <input type="text" ng-model="selected" typeahead="player.name for player in players | filter:$viewValue | limitTo:8" typeahead-on-select="onSelect($item, $model, $label)" my-placeholder="Enter Pitcher's Name" class="form-control">
+  </div>
+</div>
+
+<div ui-view class="fade-in-down"></div>

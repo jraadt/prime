@@ -1,0 +1,13 @@
+<div id="player-details">
+  <h1><span>{{player.firstName}}</span> {{player.lastName}}</h1>
+  <ul id="player-info" class="list-unstyled list-inline">
+    <li><label>Height:</label> {{player.height}}</li>
+    <li><label>Throws:</label> {{player.throwsHand}}</li>
+    <li><label>Elias:</label> {{player.eliasId}}</li>
+    <li><label>Lahman:</label> {{player.lahmanId}}</li>
+  </ul>
+
+  <div ui-view class="fade-in">
+    <div id="charts-loading">Processing statistics and charts...</div>
+  </div>
+</div>
