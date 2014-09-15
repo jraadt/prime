@@ -12,6 +12,8 @@ PRIME includes a REST-ful API to a Pitch F/X database.  The API is used to grab 
 
 PRIME also includes a front end written in AngularJS that utilizes this API and displays a player's stats as visual graphs.
 
+NOTE: Only tested on the latest versions of Chrome, Firefox, and Safari.
+
 
 ## Build
 
@@ -28,7 +30,8 @@ PRIME also includes a front end written in AngularJS that utilizes this API and 
 
 ## What's Next
 
+* Optimize for speed.
 * Allow side-by-side player comparisons.
 * Compare players to MLB averages.
 * Monitor players in real time and create alerts when they are outside a threshold.
-* Future datasources beyond Pitch F/X may allow the capture of more data at the release point of the ball.  Right now the Pitch F/X data used in PRIME is taken from 50' from the mound.  With more accurate data at the actual release point, a better analysis could be done.
+* Future data sources beyond Pitch F/X may allow the capture of more data at the release point of the ball.  Right now the Pitch F/X data used in PRIME is taken from 50' from the mound.  With more accurate data at the actual release point, a better analysis could be done.
